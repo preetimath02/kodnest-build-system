@@ -1,13 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import AppLayout from "@/components/layout/AppLayout";
+import PrimaryWorkspace from "@/components/layout/PrimaryWorkspace";
+import SecondaryPanel from "@/components/layout/SecondaryPanel";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <AppLayout
+      projectName="KodNest Premium"
+      currentStep={1}
+      totalSteps={6}
+      status="in-progress"
+      headline="Design System Reference"
+      subtext="Every token, component, and pattern used across the KodNest Premium Build System."
+    >
+      <PrimaryWorkspace />
+      <SecondaryPanel />
+    </AppLayout>
   );
 };
 

@@ -12,7 +12,28 @@ export default {
         "2xl": "1400px",
       },
     },
+    spacing: {
+      "0": "0px",
+      "1": "8px",
+      "2": "16px",
+      "3": "24px",
+      "4": "40px",
+      "5": "64px",
+      px: "1px",
+    },
     extend: {
+      fontFamily: {
+        heading: ["DM Serif Display", "Georgia", "serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        "body": ["16px", { lineHeight: "1.7" }],
+        "body-lg": ["18px", { lineHeight: "1.8" }],
+        "heading-sm": ["20px", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "heading-md": ["28px", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "heading-lg": ["36px", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+        "heading-xl": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -38,6 +59,14 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -65,20 +94,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
